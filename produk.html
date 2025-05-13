@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fatma Grafika Blora</title>
+  <link rel="preconnect" href="https://wa.me">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Helvetica', sans-serif;
+      background-color: #f9fafb;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #1d4ed8;
+      color: white;
+    }
+
+    header h1, footer p {
+      margin: 0;
+    }
+
+    section {
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      color: #1e40af;
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease-in-out;
+    }
+
+    h2:hover {
+      transform: scale(1.05);
+      color: #2563eb;
+    }
+
+    ul {
+      text-align: left;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+    .produk-card {
+      border-radius: 1rem;
+      padding: 1.5rem;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .produk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .produk-card img {
+      margin: 0 auto 1rem;
+      border-radius: 0.75rem;
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .produk-card img:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    form:hover {
+      transform: scale(1.01);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+    }
+
+    button {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1e40af;
+    }
+
+    @media (max-width: 768px) {
+      header .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #produk-list {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans leading-relaxed tracking-wide text-center">
+
+  <!-- Header -->
+  <header class="bg-blue-700 text-white p-6">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+      <div class="w-full md:w-auto">
+        <h1 class="text-3xl font-bold">Fatma Grafika Blora</h1>
+        <p class="text-sm mt-1">Percetakan terpercaya di Blora untuk segala kebutuhan cetak Anda.</p>
+      </div>
+      <a href="https://wa.me/6281234567890" target="_blank" class="mt-4 md:mt-0 bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full text-white text-sm transition transform hover:scale-105">Hubungi via WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- Why Choose Us -->
+  <section class="container mx-auto px-4 py-8">
+    <h2 class="text-2xl font-bold mb-4 text-blue-700">Kenapa Memilih Kami?</h2>
+    <ul class="space-y-2 text-gray-700 inline-block text-left">
+      <li>✅ Berpengalaman & terpercaya dalam bidang percetakan.</li>
+      <li>✅ Kualitas cetak terbaik dengan mesin modern.</li>
+      <li>✅ Harga terjangkau dan bersaing.</li>
+      <li>✅ Proses cepat dan hasil tepat waktu.</li>
+      <li>✅ Layanan cetak lengkap dalam satu tempat.</li>
+      <li>✅ Tim profesional dan ramah siap melayani Anda.</li>
+    </ul>
+  </section>
+
+  <!-- Produk Kami -->
+  <section class="container mx-auto px-4 py-8">
+    <div class="flex flex-col items-center mb-6">
+      <h2 id="produk-title" class="text-2xl font-bold text-blue-700">Produk Kami</h2>
+      <select id="filter" class="border rounded px-3 py-1 mt-2">
+        <option value="all">Semua</option>
+        <option value="undangan">Undangan</option>
+        <option value="banner">Banner</option>
+        <option value="brosur">Brosur</option>
+      </select>
+    </div>
+    <div id="produk-list" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="produk-card undangan">
+        <img loading="lazy" src="images/1350410.png" alt="Undangan Pernikahan">
+        <h3 class="font-semibold text-lg">Undangan Pernikahan</h3>
+        <p class="text-sm text-gray-600">Desain elegan & custom sesuai permintaan.</p>
+        <button class="mt-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded" onclick="previewProduk('Undangan Pernikahan', 'Desain elegan & custom sesuai permintaan.', '1350410.png')">Preview</button>
+      </div>
+
+      <div class="produk-card banner">
+        <img loading="lazy" src="https://via.placeholder.com/300x200" alt="Banner & Spanduk">
+        <h3 class="font-semibold text-lg">Banner & Spanduk</h3>
+        <p class="text-sm text-gray-600">Cetak outdoor berkualitas tinggi untuk promosi.</p>
+        <button class="mt-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded" onclick="previewProduk('Banner & Spanduk', 'Cetak outdoor berkualitas tinggi untuk promosi.', 'https://via.placeholder.com/300x200')">Preview</button>
+      </div>
+
+      <div class="produk-card brosur">
+        <img loading="lazy" src="https://via.placeholder.com/300x200" alt="Brosur & Flyer">
+        <h3 class="font-semibold text-lg">Brosur & Flyer</h3>
+        <p class="text-sm text-gray-600">Promosi bisnis lebih mudah dengan cetak brosur.</p>
+        <button class="mt-3 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded" onclick="previewProduk('Brosur & Flyer', 'Promosi bisnis lebih mudah dengan cetak brosur.', 'https://via.placeholder.com/300x200')">Preview</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Pemesanan -->
+  <section class="container mx-auto px-4 py-10">
+    <h2 class="text-2xl font-bold mb-6 text-blue-700">Form Pemesanan</h2>
+    <form onsubmit="kirimWA(event)" class="space-y-4 max-w-md mx-auto">
+      <input name="nama" type="text" placeholder="Nama Anda" required>
+      <input name="wa" type="text" placeholder="Nomor WhatsApp" required>
+      <textarea name="pesan" placeholder="Detail pesanan Anda" required></textarea>
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-700 text-white text-center p-4">
+    <p>&copy; 2025 Fatma Grafika Blora. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal Preview Produk -->
+  <div id="preview-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-6 w-11/12 max-w-md text-center relative">
+      <button onclick="tutupPreview()" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl">&times;</button>
+      <img id="preview-img" src="" alt="Preview Produk" class="w-full rounded mb-4">
+      <h3 id="preview-title" class="text-lg font-bold mb-2"></h3>
+      <p id="preview-desc" class="text-sm text-gray-700"></p>
+    </div>
+  </div>
+
+  <!-- Script Filter Produk -->
+  <script defer>
+    const filter = document.getElementById('filter');
+    const cards = document.querySelectorAll('.produk-card');
+    const produkTitle = document.getElementById('produk-title');
+
+    const titleMap = {
+      all: 'Produk Kami',
+      undangan: 'Undangan',
+      banner: 'Banner',
+      brosur: 'Brosur'
+    };
+
+    filter.addEventListener('change', () => {
+      const val = filter.value;
+      produkTitle.textContent = titleMap[val] || 'Produk Kami';
+
+      cards.forEach(card => {
+        card.style.display = (val === 'all' || card.classList.contains(val)) ? 'block' : 'none';
+      });
+    });
+  </script>
+
+  <!-- Script Kirim WhatsApp & Preview Modal -->
+  <script defer>
+    function kirimWA(e) {
+      e.preventDefault();
+      const nama = document.querySelector('input[name="nama"]').value.trim();
+      const wa = document.querySelector('input[name="wa"]').value.trim();
+      const pesan = document.querySelector('textarea[name="pesan"]').value.trim();
+
+      if (!nama || !wa || !pesan) {
+        alert('Semua kolom wajib diisi.');
+        return;
+      }
+
+      if (!/^\d{10,15}$/.test(wa)) {
+        alert('Nomor WhatsApp harus berupa angka dan terdiri dari 10-15 digit.');
+        return;
+      }
+
+      const url = `https://wa.me/6281234567890?text=Halo%20Fatma%20Grafika%2C%20saya%20${encodeURIComponent(nama)}%20(${encodeURIComponent(wa)})%20ingin%20memesan%3A%20${encodeURIComponent(pesan)}`;
+      window.open(url, '_blank');
+    }
+
+    function previewProduk(judul, deskripsi, gambar) {
+      document.getElementById('preview-title').textContent = judul;
+      document.getElementById('preview-desc').textContent = deskripsi;
+      document.getElementById('preview-img').src = gambar;
+      document.getElementById('preview-modal').classList.remove('hidden');
+    }
+
+    function tutupPreview() {
+      document.getElementById('preview-modal').classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>

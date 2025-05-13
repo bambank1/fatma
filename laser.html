@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cetak Laser A3+</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f0f4f8, #e0f0ff);
+    }
+    header {
+      background-color: #007faa;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 5px;
+    }
+    header p {
+      font-size: 18px;
+      margin: 0;
+    }
+    main {
+      padding: 40px 30px;
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #edf1f2;
+    }
+    ul {
+      padding-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .gallery {
+      margin-top: 50px;
+    }
+    .gallery h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #444;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+    }
+    .slide {
+      display: none;
+    }
+    .slide img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    footer {
+      background-color: #005baa;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 15px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cetak laser A3+ Berkualitas</h1>
+    <h>Cepat, Murah, dan Profesional</h>
+  </header>
+  <main>
+    <p>Kami melayani <strong>laser A3+</strong> kami menawarkan hasil cetakan berkualitas tinggi dengan warna tajam dan detail presisi. Menggunakan mesin laser berteknologi canggih, cetakan kami cocok untuk kebutuhan profesional seperti company profile, brosur, katalog, undangan eksklusif, hingga materi presentasi. <br>
+	Ukuran A3+ memberikan keleluasaan lebih dibanding A3 biasa, ideal untuk desain kreatif, layout meluas, maupun kebutuhan cetak dalam skala besar tanpa mengorbankan resolusi.
+	</p>
+
+    <ul>
+      <li>✅ Hasil cetak presisi dengan warna konsisten</li>
+      <li>✅ Cocok untuk media kertas art paper, ivory, doff, glossy, dan lainnya</li>
+      <li>✅ Cepat kering dan siap pakai</li>
+      <li>✅ Tersedia layanan cetak satuan maupun dalam jumlah besar</li>
+      <li>✅ Mendukung berbagai finishing seperti laminasi, lipat, dan jilid</li>
+    </ul>
+
+    <p>Dengan layanan cetak laser A3+, dokumen dan materi promosi Anda akan tampil lebih profesional dan berkelas.</p>
+
+    <section class="gallery">
+      <h2>Galeri Hasil Cetakan</h2>
+      <div class="slideshow-container">
+        <div class="slide">
+          <img src="images/banner1.jpg" alt="Banner 1">
+        </div>
+        <div class="slide">
+          <img src="images/banner2.jpg" alt="Banner 2">
+        </div>
+        <div class="slide">
+          <img src="images/banner3.jpg" alt="Banner 3">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Jasa Cetak Banner. Semua hak dilindungi.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+  </script>
+</body>
+</html>

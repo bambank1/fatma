@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cetak Banner Berkualitas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f0f4f8, #e0f0ff);
+    }
+    header {
+      background-color: #007faa;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 5px;
+    }
+    header p {
+      font-size: 18px;
+      margin: 0;
+    }
+    main {
+      padding: 40px 30px;
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #edf1f2;
+    }
+    ul {
+      padding-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .gallery {
+      margin-top: 50px;
+    }
+    .gallery h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #444;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+    }
+    .slide {
+      display: none;
+    }
+    .slide img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    footer {
+      background-color: #005baa;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 15px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Cetak Banner Berkualitas</h1>
+    <h>Cepat, Murah, dan Profesional</h>
+  </header>
+  <main>
+    <p>Kami melayani <strong>cetak banner</strong> berbagai ukuran dengan hasil cetakan tajam, warna cerah, dan bahan yang tahan lama. Cocok untuk keperluan promosi usaha, event, seminar, kampanye, atau acara pribadi seperti ulang tahun dan pernikahan.</p>
+
+    <ul>
+      <li>✅ Bahan tersedia: Flexi China, Korea, Jerman</li>
+      <li>✅ Ukuran custom sesuai kebutuhan</li>
+      <li>✅ Finishing rapi: lipat, lubang tali, atau pasang ring (eyelet)</li>
+      <li>✅ Cetak mulai dari 1 pcs</li>
+      <li>✅ Proses cepat, bisa ditunggu!</li>
+    </ul>
+
+    <p>Kami siap melayani pemesanan dalam jumlah besar maupun kecil, dengan harga bersaing dan kualitas terbaik. Percayakan kebutuhan cetak banner Anda kepada kami!</p>
+
+    <section class="gallery">
+      <h2>Galeri Hasil Cetakan</h2>
+      <div class="slideshow-container">
+        <div class="slide">
+          <img src="images/banner1.jpg" alt="Banner 1">
+        </div>
+        <div class="slide">
+          <img src="images/banner2.jpg" alt="Banner 2">
+        </div>
+        <div class="slide">
+          <img src="images/banner3.jpg" alt="Banner 3">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Jasa Cetak Banner. Semua hak dilindungi.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex-1].style.display = "block";
+    }
+  </script>
+</body>
+</html>
